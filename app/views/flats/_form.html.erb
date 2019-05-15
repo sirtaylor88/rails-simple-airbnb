@@ -1,0 +1,11 @@
+<div class="container w-60" style="margin-top: 24px">
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :name, label: 'Flat name', error: 'Name is required' %>
+    <%= f.input :picture_url, label: 'Picture url'  %>
+    <%= f.input :address, label: 'Full address', error: 'Address is required'  %>
+    <%= f.input :description, label: 'Description', error: 'Description is required', input_html: { rows: '10'} %>
+    <%= f.input :price_per_night, label: 'Price per night', input_html: { min: '0'}%>
+    <%= f.input :number_of_guests, label: 'Number of guests', input_html: { min: '0'}%>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
